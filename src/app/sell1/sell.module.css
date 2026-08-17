@@ -1,0 +1,27 @@
+.sell-container {
+    background: url("../../../public/sell-page.jpg");
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.sell-content{
+    background-color: #ffffffe9;
+    padding: 40px;
+    border-radius: 10px;
+}
+.sell-heading{
+    text-align: center;
+    font-weight: 700;
+    font-size: 48px;
+}
+.sell-about{
+    text-align: center;
+}

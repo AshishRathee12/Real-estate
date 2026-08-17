@@ -1,0 +1,412 @@
+.stepPage {
+    width: 100%;
+    min-height: calc(100vh - 76px);
+    padding: 48px clamp(16px, 4vw, 56px) 64px;
+    background: #f5f7fa;
+}
+
+.stepPanel {
+    width: min(100%, 720px);
+    margin: 0 auto;
+    padding: clamp(22px, 4vw, 34px);
+    background: #ffffff;
+    border: 1px solid #dfe6ef;
+    border-radius: 8px;
+    box-shadow: 0 16px 36px rgba(20, 36, 64, 0.1);
+}
+
+.widePanel {
+    width: min(100%, 960px);
+}
+
+.stepHeader {
+    margin-bottom: 22px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: #3b5998;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.stepHeader h1 {
+    margin: 0;
+    color: #182230;
+    font-size: clamp(1.6rem, 2.4vw, 2.15rem);
+    font-weight: 820;
+    line-height: 1.18;
+}
+
+.stepPanel p,
+.stepHeader p {
+    margin: 10px 0 0;
+    color: #5d6b82;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+.formStack {
+    display: grid;
+    gap: 22px;
+}
+
+.optionList {
+    display: grid;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.optionList legend,
+.sectionTitle {
+    margin: 0 0 12px;
+    color: #243b63;
+    font-size: 0.96rem;
+    font-weight: 800;
+}
+
+.radioRow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 54px;
+    padding: 13px 14px;
+    color: #344054;
+    background: #ffffff;
+    border: 1px solid #dfe6ef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
+}
+
+.radioRow:hover,
+.radioRow:focus-within {
+    border-color: #b9c8dc;
+    background: #f8fafc;
+}
+
+.radioRow:has(input:checked) {
+    border-color: #3b5998;
+    background: #f6f8fc;
+    box-shadow: inset 3px 0 0 #3b5998;
+}
+
+.radioRow input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.radioControl {
+    width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    border: 2px solid #b7c3d6;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.radioControl::after {
+    width: 8px;
+    height: 8px;
+    content: "";
+    border-radius: 50%;
+    background: #3b5998;
+    opacity: 0;
+}
+
+.radioRow:has(input:checked) .radioControl {
+    border-color: #3b5998;
+}
+
+.radioRow:has(input:checked) .radioControl::after {
+    opacity: 1;
+}
+
+.radioText {
+    min-width: 0;
+    color: #182230;
+    font-size: 0.98rem;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+.actionRow {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+}
+
+.primaryButton {
+    min-width: 118px;
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    color: #ffffff;
+    background: #3b5998;
+    border: 1px solid #3b5998;
+    border-radius: 8px;
+    font-weight: 800;
+    transition: background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+    background: #2f4d86;
+    border-color: #2f4d86;
+    box-shadow: 0 10px 22px rgba(59, 89, 152, 0.2);
+}
+
+.primaryButton:disabled {
+    cursor: not-allowed;
+    color: #8a97ab;
+    background: #eef2f6;
+    border-color: #d9e1ec;
+    box-shadow: none;
+}
+
+.sectionBlock {
+    padding-top: 20px;
+    border-top: 1px solid #eef2f6;
+}
+
+.sectionBlock:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.sectionHeading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.sectionHeading .sectionTitle {
+    margin-bottom: 0;
+}
+
+.sectionHeading span,
+.fieldControl small {
+    color: #667085;
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+.segmentGroup,
+.inlineOptions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.segmentButton,
+.choiceButton,
+.radioPill {
+    min-height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    color: #344054;
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    font-weight: 720;
+    cursor: pointer;
+    transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
+.segmentButton:hover,
+.choiceButton:hover,
+.radioPill:hover,
+.segmentButton:focus-visible,
+.choiceButton:focus-visible,
+.radioPill:focus-within {
+    color: #2f4d86;
+    background: #f6f8fb;
+    border-color: #b9c8dc;
+}
+
+.isActive {
+    color: #ffffff;
+    background: #3b5998;
+    border-color: #3b5998;
+}
+
+.isActive:hover,
+.isActive:focus-visible {
+    color: #ffffff;
+    background: #2f4d86;
+    border-color: #2f4d86;
+}
+
+.radioPill input {
+    margin: 0 8px 0 0;
+    accent-color: #3b5998;
+}
+
+.choiceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.choiceButton {
+    width: 100%;
+    min-height: 46px;
+}
+
+.errorText {
+    margin-top: 10px !important;
+    color: #b42318 !important;
+    font-weight: 700;
+}
+
+.fieldGrid,
+.detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.detailsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.fieldControl {
+    display: grid;
+    gap: 7px;
+    min-width: 0;
+}
+
+.fieldControl span {
+    color: #344054;
+    font-size: 0.9rem;
+    font-weight: 750;
+}
+
+.fieldControl input,
+.fieldControl select {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 12px;
+    color: #182230;
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    outline: 0;
+    font-size: 0.96rem;
+}
+
+.fieldControl input:focus,
+.fieldControl select:focus {
+    border-color: #3b5998;
+    box-shadow: 0 0 0 3px rgba(59, 89, 152, 0.12);
+}
+
+.fieldControl input::placeholder {
+    color: #98a2b3;
+}
+
+.fieldControl select:disabled {
+    color: #98a2b3;
+    background: #f6f8fb;
+}
+
+.counterList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.counterRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 56px;
+    padding: 10px 12px;
+    background: #f8fafc;
+    border: 1px solid #e4eaf2;
+    border-radius: 8px;
+}
+
+.counterRow > span {
+    color: #344054;
+    font-weight: 700;
+}
+
+.counterControl {
+    display: inline-grid;
+    grid-template-columns: 34px 38px 34px;
+    align-items: center;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+}
+
+.counterControl button {
+    width: 34px;
+    height: 34px;
+    color: #243b63;
+    background: #ffffff;
+    border: 0;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.counterControl button:hover,
+.counterControl button:focus-visible {
+    background: #eef3fb;
+}
+
+.counterControl strong {
+    color: #182230;
+    font-size: 0.98rem;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .stepPage {
+        padding: 24px 0 48px;
+    }
+
+    .stepPanel {
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+        box-shadow: 0 12px 28px rgba(20, 36, 64, 0.08);
+    }
+
+    .choiceGrid,
+    .fieldGrid,
+    .detailsGrid,
+    .counterList {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionHeading {
+        display: grid;
+        gap: 4px;
+    }
+
+    .actionRow,
+    .primaryButton {
+        width: 100%;
+    }
+}

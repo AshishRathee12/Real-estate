@@ -1,0 +1,462 @@
+.home {
+  min-height: calc(100vh - 76px);
+  background: #f5f7fa;
+}
+
+.hero {
+  position: relative;
+  min-height: clamp(540px, 76vh, 680px);
+  display: flex;
+  align-items: center;
+  padding: 56px clamp(22px, 5vw, 84px);
+  overflow: hidden;
+  background-image: url("/cover2.webp");
+  background-position: center right;
+  background-size: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 28, 45, 0.58) 0%, rgba(16, 28, 45, 0.36) 45%, rgba(16, 28, 45, 0.12) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 640px);
+  color: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #f2d2a5;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 560px;
+  margin: 0;
+  font-size: clamp(2rem, 4.2vw, 3.55rem);
+  font-weight: 820;
+  line-height: 1.08;
+}
+
+.subtitle {
+  max-width: 500px;
+  margin: 14px 0 34px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.96rem, 1.6vw, 1.1rem);
+  line-height: 1.5;
+}
+
+.searchPanel {
+  width: min(100%, 640px);
+}
+
+.segmentedControl {
+  display: inline-grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  width: min(100%, 480px);
+  min-height: 44px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px 8px 0 0;
+  backdrop-filter: blur(8px);
+}
+
+.modeButton {
+  min-height: 36px;
+  padding: 0 10px;
+  color: #ffffff;
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.modeButton:hover,
+.modeButton:focus-visible,
+.modeButtonActive {
+  color: #243b63;
+  background: #ffffff;
+}
+
+.searchBar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  width: 100%;
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 0 8px 8px 8px;
+  box-shadow: 0 24px 60px rgba(3, 10, 20, 0.28);
+}
+
+.searchField {
+  min-width: 0;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  color: #3b5998;
+  background: #f7f9fc;
+  border: 1px solid #e0e7f0;
+  border-radius: 8px;
+}
+
+.searchField input {
+  width: 100%;
+  min-width: 0;
+  color: #243b63;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 0.96rem;
+  font-weight: 650;
+}
+
+.searchField input::placeholder {
+  color: #667085;
+}
+
+.searchButton {
+  min-width: 118px;
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #3b5998;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 850;
+  box-shadow: 0 14px 28px rgba(59, 89, 152, 0.26);
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.searchButton:hover,
+.searchButton:focus-visible {
+  background: #2f4d86;
+  box-shadow: 0 16px 32px rgba(47, 77, 134, 0.3);
+  transform: translateY(-1px);
+}
+
+.loading {
+  margin: 32px;
+  color: #364152;
+  font-weight: 700;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.browseProperties {
+  padding: 76px clamp(18px, 5vw, 76px) 34px;
+  background: #f7f8fc;
+}
+
+.browseHeader {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.browseHeader h2 {
+  margin: 0;
+  color: #101c76;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 850;
+  line-height: 1.1;
+}
+
+.browseHeader p:last-child {
+  margin: 16px 0 0;
+  color: #6d72b8;
+  font-size: clamp(1rem, 1.6vw, 1.22rem);
+  line-height: 1.45;
+}
+
+.browseLayout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+.propertyTypes {
+  display: grid;
+  gap: 12px;
+}
+
+.propertyTypeButton {
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 8px 14px;
+  color: #1f2a8f;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 650;
+  text-align: left;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.propertyTypeButton:hover,
+.propertyTypeButton:focus-visible,
+.propertyTypeActive {
+  color: #1238ff;
+  background: #ffffff;
+  border-color: #1f4fff;
+}
+
+.propertyTypeIcon {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b5998;
+  background: #ffe4a3;
+  border-radius: 50%;
+}
+
+.propertyShowcase {
+  min-height: 440px;
+  border-radius: 8px;
+}
+
+.services {
+  padding: 72px clamp(18px, 5vw, 76px) 88px;
+  background: #f5f7fa;
+}
+
+.servicesHeader {
+  max-width: 680px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.sectionEyebrow {
+  margin: 0 0 8px;
+  color: #3b5998;
+  font-size: 0.78rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.servicesHeader h2 {
+  margin: 0;
+  color: #182230;
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+  font-weight: 820;
+  line-height: 1.16;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 28px 30px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #dfe6ef;
+  border-radius: 8px;
+  box-shadow: 0 18px 38px rgba(20, 36, 64, 0.1);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.serviceCard:hover {
+  border-color: #c9d6e6;
+  box-shadow: 0 22px 46px rgba(20, 36, 64, 0.14);
+  transform: translateY(-3px);
+}
+
+.serviceVisual {
+  width: min(100%, 220px);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.serviceCard h3 {
+  margin: 0;
+  color: #101828;
+  font-size: 1.55rem;
+  font-weight: 850;
+  line-height: 1.2;
+}
+
+.serviceCard p {
+  max-width: 330px;
+  margin: 14px 0 26px;
+  color: #475467;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 0 18px;
+  color: #3b5998;
+  background: #ffffff;
+  border: 1px solid #3b5998;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.serviceLink:hover,
+.serviceLink:focus-visible {
+  color: #ffffff;
+  background: #3b5998;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: 560px;
+    align-items: flex-end;
+    padding-top: 76px;
+    padding-bottom: 42px;
+    background-position: center;
+  }
+
+  .heroOverlay {
+    background: linear-gradient(180deg, rgba(16, 28, 45, 0.34) 0%, rgba(16, 28, 45, 0.72) 100%);
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  .serviceCard {
+    min-height: auto;
+  }
+
+  .browseLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .propertyTypes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .propertyShowcase {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 530px;
+    padding: 58px 14px 28px;
+  }
+
+  .subtitle {
+    margin-bottom: 26px;
+  }
+
+  .segmentedControl {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 8px;
+  }
+
+  .searchBar {
+    grid-template-columns: 1fr;
+    border-radius: 8px;
+  }
+
+  .searchButton {
+    width: 100%;
+  }
+
+  .services {
+    padding: 46px 14px 64px;
+  }
+
+  .browseProperties {
+    padding: 46px 14px 24px;
+  }
+
+  .browseHeader {
+    margin-bottom: 24px;
+  }
+
+  .propertyTypes {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesHeader {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .serviceCard {
+    align-items: flex-start;
+    padding: 24px 20px;
+    text-align: left;
+  }
+
+  .serviceVisual {
+    width: 146px;
+    height: 104px;
+    margin-bottom: 18px;
+  }
+
+  .serviceCard h3 {
+    font-size: 1.35rem;
+  }
+
+  .serviceCard p {
+    max-width: none;
+    margin-bottom: 22px;
+  }
+}
