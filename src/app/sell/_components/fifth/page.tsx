@@ -25,7 +25,7 @@ export default function Fifth({ setProperty, setPage, property }: property) {
 
         try {
             const response = await axios.post("/api/images", formData);
-
+            // console.log(response)
             const urls = (response.data as UploadedImage[]).map((image) => image.secure_url);
 
             setProperty((prev) => ({
@@ -34,7 +34,7 @@ export default function Fifth({ setProperty, setPage, property }: property) {
             }))
             setImg([])
 
-            console.log(urls);
+            // console.log(urls);
         } catch (error) {
             console.error("Upload failed:", error);
         }

@@ -140,7 +140,7 @@ export default function Home() {
       </section>
 
 
- <section className={styles.services} aria-labelledby="services-title">
+      <section className={styles.services} aria-labelledby="services-title">
         <div className={styles.servicesHeader}>
           <p className={styles.sectionEyebrow}>How HomeFinder helps</p>
           <h2 id="services-title">Start with the move you want to make</h2>
@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-     
+
 
     </main>
   )

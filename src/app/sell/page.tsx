@@ -29,8 +29,8 @@ export default function SellPage() {
         images: [],
         propertySpecific: {},
     });
-    console.log(property)
-    console.log(page)
+    // console.log(property)
+    // console.log(page)
 
     // console.log(session?.user?.name)
 

@@ -196,9 +196,9 @@ export default function Page({ setProperty, setPage }: SellStepProps) {
                 >
                   <option value="">Select District</option>
 
-                  {districts.map((district) => (
+                  {districts.map((district,index) => (
                     <option
-                      key={district.district}
+                      key={index}
                       value={district.district}
                     >
                       {district.district}
