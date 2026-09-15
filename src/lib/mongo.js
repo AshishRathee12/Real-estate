@@ -9,3 +9,13 @@ export async function dbConnect() {
         console.log("error occur while connecting from lib")
     }
 }
+
+export async function connectCollectionDB() {
+    try {
+        const conn = await mongoose.connect(process.env.MONGODB_collection);
+        console.log("connection establish form collection")
+        return conn;
+    } catch (error) {
+        console.log("error occur while connecting from lib")
+    }
+}
